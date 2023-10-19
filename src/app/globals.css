@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,500&family=Oleo+Script&family=Poppins:wght@100;400&family=Roboto&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 95%;
+  margin: 0 auto;
+  /* background-color: #edeef5; */
+  background-color: #403132;
+  /* background-color: #1115f5; */
+}
