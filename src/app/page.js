@@ -36,6 +36,7 @@ export default function Home() {
       <div className='mt-5'>
         <h3 className='font-bold md:text-3xl text-white'>THE ROYAL SHEPHERD</h3>
         <h4 className='font-bold md:text-3xl text-white'>CHRIST APOSTOLIC CHURCH</h4>
+        <h5 className='font-bold md:text-2xl text-white'>NATIONAL & OVERSEA</h5>
         <Link href="/form"><button className='mt-7 mb-7 bg-[#1115f5] border-2 border-white text-white px-6 py-2 md:text-lg rounded-md font-bold'>Go to Registration page</button></Link>
       </div>
       <div className='flex md:hidden md:space-x-12 space-x-6 justify-center photos'>
