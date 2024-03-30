@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import cac from '../../public/image/cac_logo copy.png'
 import rs from '../../public/image/download copy.png'
@@ -7,7 +8,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className='text-center h-screen place-content-center flex flex-col'>
+    <div className='text-center h-screen place-content-center flex all flex-col'>
       <Image 
         src={rs}
         alt='Picture of the RS'
@@ -37,7 +38,8 @@ export default function Home() {
         <h3 className='font-bold md:text-3xl text-white'>THE ROYAL SHEPHERD</h3>
         <h4 className='font-bold md:text-3xl text-white'>CHRIST APOSTOLIC CHURCH</h4>
         <h5 className='font-bold md:text-2xl text-white'>NATIONAL & OVERSEA</h5>
-        <Link href="/form"><button className='mt-7 mb-7 bg-[#1115f5] border-2 border-white text-white px-6 py-2 md:text-lg rounded-md font-bold'>Go to Registration page</button></Link>
+        <Link href="/form"><button className='mt-7 mb-7 bg-[#1115f5] w-3/4 md:w-1/4 border-2 border-white text-white px-6 py-2 md:text-lg rounded-md font-bold'>Go to Registration page</button></Link> <br/>
+        <Link href="/login"><button className='mt-7 mb-7 bg-[#1115f5] w-3/4 md:w-1/4 border-2 border-white text-white px-6 py-2 md:text-lg rounded-md font-bold'>Admin Login</button></Link>
       </div>
       <div className='flex md:hidden md:space-x-12 space-x-6 justify-center photos'>
         
