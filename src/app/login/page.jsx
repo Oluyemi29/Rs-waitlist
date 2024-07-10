@@ -24,20 +24,14 @@ const Forms = () => {
       }
     })
   }
-
-
   const handleSubmit = async (e)=>{
     e.preventDefault()
-
     const {email, password} = formData
-
     try {
       const res = await signIn('credentials',{
         email,password, redirect : false
       })
-
       console.log(res);
-
       if(res.ok && res.status === 200){
         toast.success('Welcome🤝 Admin')
         router.push('/userdetails')

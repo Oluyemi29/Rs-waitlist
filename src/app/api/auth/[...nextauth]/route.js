@@ -5,9 +5,7 @@ import Users from "../../model/userModel";
 import { NextResponse } from "next/server";
 
 export const authOptions = {
-  // Configure one or more authentication providers
   providers: [
-    
     CredentialsProvider({
         name : 'Credentials',
 
@@ -17,25 +15,16 @@ export const authOptions = {
         },
         async authorize(credentials){
             const {email, password } = credentials
-
             try {
                 await connectDB()
-
                 const user = await Users.findOne({email})
-                
-
                 if(!user){
                   return null
                 }
                 if(user.role !== 1 || password !== 'Apata@ROS' || email !== 'petlar4real@gmail.com'){
                   return null
                 }
-
-                return {
-                  ...user.toObject(),
-                  email: user.email, // Make sure email is included in the session
-                };
-
+                return user
             } catch (error) {
                 console.log(`an error of ${error} occured`)
             }
@@ -51,8 +40,6 @@ export const authOptions = {
   },
   secret : process.env.NEXTAUTHSECRET,
 }
-
-
 const handler = nextAuth(authOptions)
 
 export {handler as GET, handler as POST}
